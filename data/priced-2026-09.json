@@ -279,7 +279,7 @@
     "billedModelCost": 0.32,
     "computeBilled": 0,
     "billedPerRun": 0.064,
-    "billedPerMergedPullRequest": 0.1067
+    "billedPerMergedPullRequest": 0.10666666666666667
   },
   "roundingRule": {
     "rule": "max(0.01, round(exact, 2)) per token line",

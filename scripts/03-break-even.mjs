@@ -33,10 +33,13 @@ for (const file of files) {
   for (const w of priced.workloads ?? []) workloads.push(w);
 }
 
+// The first whole number of runs at which the plan is strictly cheaper. The
+// small epsilon keeps 50 / 0.1 = 500 a tie (not cheaper) despite float error.
+const cheaperFrom = (threshold, cost) => Math.floor(threshold / cost + 1e-9) + 1;
 const results = workloads.map((w) => ({
   ...w,
-  proBreakEvenRuns: Math.ceil(proBreakEven / w.perRun),
-  teamBreakEvenRuns: Math.ceil(teamBreakEven / w.perRun),
+  proBreakEvenRuns: cheaperFrom(proBreakEven, w.perRun),
+  teamBreakEvenRuns: cheaperFrom(teamBreakEven, w.perRun),
 }));
 
 // The cost curve for a chart: monthly list usage from $0 to $400.
@@ -47,11 +50,11 @@ for (let usage = 0; usage <= 400; usage += 10) {
 
 const out = { proBreakEvenUsage: proBreakEven, teamBreakEvenUsage: +teamBreakEven.toFixed(2), maxSaving, workloads: results, curve };
 writeFileSync("data/break-even.json", `${JSON.stringify(out, null, 2)}\n`);
-console.log(`Pro is cheaper than pay as you go above $${proBreakEven.toFixed(2)} of list-price usage a month; it saves at most $${maxSaving.Pro}.`);
+console.log(`Pro is cheaper than pay as you go above $${proBreakEven.toFixed(2)} a month of discount-eligible usage at list price; it saves at most $${maxSaving.Pro}.`);
 console.log(`Team is cheaper than Pro above $${teamBreakEven.toFixed(2)}; it saves at most $${maxSaving.Team}.`);
 const table = [
-  ["workload", "cost per unit", "Pro pays off above", "Team beats Pro above"],
-  ...results.map((r) => [r.name, `$${r.perRun}`, `${r.proBreakEvenRuns} ${r.unit}s/month`, `${r.teamBreakEvenRuns} ${r.unit}s/month`]),
+  ["workload", "cost per unit", "Pro cheaper from", "Team cheaper than Pro from"],
+  ...results.map((r) => [r.name, `$${r.perRun.toFixed(4)}`, `${r.proBreakEvenRuns} ${r.unit}s/month`, `${r.teamBreakEvenRuns} ${r.unit}s/month`]),
 ];
 const widths = table[0].map((_, i) => Math.max(...table.map((row) => row[i].length)));
 console.log("");

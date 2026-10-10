@@ -15,7 +15,7 @@
     },
     {
       "name": "merged pull request (2026-09)",
-      "perRun": 0.1067,
+      "perRun": 0.10666666666666667,
       "unit": "merged PR",
       "proBreakEvenRuns": 469,
       "teamBreakEvenRuns": 1958

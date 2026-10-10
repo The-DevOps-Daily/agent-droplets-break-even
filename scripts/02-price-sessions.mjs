@@ -89,8 +89,9 @@ if (values.runs) {
     exactModelCost: +sum(matched, "exact").toFixed(4),
     billedModelCost: +sum(matched, "billed").toFixed(2),
     computeBilled: +sum(matched, "computeBilled").toFixed(2),
-    billedPerRun: +(sum(matched, "billed") / matched.length).toFixed(4),
-    billedPerMergedPullRequest: merged ? +(sum(matched, "billed") / merged).toFixed(4) : null,
+    // Tokens plus compute, as billed. Storage, tools and egress were $0 here.
+    billedPerRun: (sum(matched, "billed") + sum(matched, "computeBilled")) / matched.length,
+    billedPerMergedPullRequest: merged ? (sum(matched, "billed") + sum(matched, "computeBilled")) / merged : null,
   };
 }
 out.roundingRule = { rule: "max(0.01, round(exact, 2)) per token line", lines: ruleLines, matches: ruleMatches };
