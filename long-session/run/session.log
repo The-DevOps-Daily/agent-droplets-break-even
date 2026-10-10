@@ -1,0 +1,135 @@
+_duration
+for text in ["P", "PT", "P1DT", "abc", "1h30x", "90", "P1W2D", "PT30M1H", "PT1H1H", "PT0.5S", "P1D2X", "P1D30m", "P1M1Y", "P90", "1h3", "P-1D", "9 0s"]:
+    try:
+        parse_duration(text)
+        print("accepted", text)
+    except ValueError as error:
+        print(f"{text!r:12} -> {error}")
+print(parse_duration("P1Y1M1DT1H1M1S"), parse_duration("P1YT1H"), parse_duration("PT1H30M"))
+EOF
+git status --short && git diff --stat
+```
+
+Hmm — `{text!r:12}` — format spec with !r... f"{text!r:12}" works (repr then pad) ✓.
+
+Let me now also double-check `assert text.count(old) == 2` for test_cli — the two `assertIn("not a duration", err.getvalue())` occurrences ✓ — I wrote both. And `assert text.count(old_mod) == 1` ✓.
+
+One more — after patching, do the test_cli tests still assert `self.assertEqual(result.stderr, "")`? test_module_entry_point (valid input) asserts stderr == "" ✓ unaffected.
+
+OK — also for the response: keep it structured and terse-ish. The user asked for: review findings (implied), fix, suite run, and the session change list. I'll organize:
+
+1. Findings & fixes (from the strict review)
+2. Suite result  
+3. Session change list
+
+Let me write the commands now. Also — I should double check the README patch string EXACTLY matches what's in the file. From the README diff shown in the type-hints turn:
+
+```
++The same parser runs from the command line: each duration prints on its
++own line, and input that cannot be parsed exits with status 2.
+```
+
+✓ so old = "own line, and input that cannot be parsed exits with status 2." ✓ (unique in file? The README earlier section "exits with status 2" — only this line mentions it ✓ — well, my replace string includes "own line, and input..." — unique ✓).
+
+New text:
+```
+own line, input that cannot be parsed exits with status 2, and so does
+calling it with no arguments.
+```
+
+Hmm — "input that cannot be parsed exits with status 2" — grammar: subject "input" verb "exits" ✓. New: "own line, input that cannot be parsed exits with status 2, and so does calling it with no arguments." — comma splice-ish: "each duration prints on its own line, input ... exits with status 2, and so does calling it with no arguments." — three clauses joined — comma splice between independent clauses — eh, README prose is casual. Acceptable? Let me make it cleaner:
+
+"The same parser runs from the command line: each duration prints on its own line; input that cannot be parsed, and calling it with no arguments at all, both exit with status 2."
+
+Hmm. Or keep two sentences:
+
+```
+The same parser runs from the command line: each duration prints on its
+own line. Input it cannot parse exits with status 2, and so does calling
+it with no arguments.
+```
+
+Hmm — "Input it cannot parse" — fine. Actually simplest minimal edit: change ", and input that cannot be parsed exits with status 2." → ". Input that cannot be parsed exits with status 2, and so does calling it with no arguments."
+
+Result:
+
+```
+The same parser runs from the command line: each duration prints on its
+own line. Input that cannot be parsed exits with status 2, and so does
+calling it with no arguments.
+```
+
+Clean ✓. old = "own line, and input that cannot be parsed exits with status 2." new = "own line. Input that cannot be parsed exits with status 2, and so does\ncalling it with no arguments." ✓
+
+OK — finalize. Also double check: no trailing whitespace issues etc. Fine.
+
+One LAST check of the scanner for a tricky valid case — "P100D": weeks: fullmatch("100d") — `\d+` "100" then 'd' ≠ 'w' → no ✓. date: y: "100" then 'd'≠y no; m: no; d: "100d" ✓ → 8640000 ✓.
+
+"PT100H": time h: `(\d+)h` at "100h": "100" then 'h' ✓ → 360000 ✓.
+
+"PT1H0M0S": h "1h", m "0m", s "0s" → 3600 ✓ valid ✓.
+
+Alright — also one potential gotcha in `_parse_iso`: after date loop, `text[position] == "t"` — what if position == len? Guarded by `position < len(text) and` ✓.
+
+What about "P0W"? weeks fullmatch("0w") ✓ → 0 ✓ — valid zero weeks ✓ fine.
+
+"P0W1D"? weeks fullmatch no; weeks MATCH("0w1d") ✓ → combined error ✓.
+
+Let me write it all out now.
+
+Also — the final response should list "what changed in this session" — I'll produce the cumulative list with test counts. And findings. Keep it organized with short bullets. I'll also cite key file:line refs.
+
+Let me also decide — do I need to re-verify README rendering (git diff README.md) in command 3? Include `git diff --stat` ✓ and maybe show README diff quickly — I'll trust the replace assertions.
+
+Execute now.
+[2026-10-10T12:48:46Z] run.tool_call_started
+
+▸ cat > durations/__init__.py <<'EOF' """Parse durations such as "90s", "15m", …
+[2026-10-10T12:48:46Z] run.tool_call_completed
+  ✓ (no output) (11ms)
+[2026-10-10T12:48:49Z] run.usage_recorded
+[2026-10-10T12:48:49Z] run.usage_recorded
+[2026-10-10T12:48:49Z] run.log
+  session.diff
+Now patch tests/test_cli.py (update message assertions), insert ErrorMessageTest into tests/test_durations.py, and fix the README wording — all via one python script with assertions.
+[2026-10-10T12:49:07Z] run.tool_call_started
+
+▸ python3 - <<'PYEOF' from pathlib import Path cli = Path("tests/test_cli.py") …
+[2026-10-10T12:49:07Z] run.tool_call_completed
+  ✓ ---------------------------------------------------------------------- (132ms)
+[2026-10-10T12:49:07Z] run.usage_recorded
+[2026-10-10T12:49:07Z] run.usage_recorded
+[2026-10-10T12:49:07Z] run.log
+  session.diff
+Everything passes: 45 tests OK, all error messages pinpoint the offending part, valid full-form ISO parses work (P1Y1M1DT1H1M1S = 34218061 ✓ = 34214400 + 3661 ✓; P1YT1H = 31536000+3600 = 31539600 ✓).
+
+Now write the final response: review findings, fixes, suite result, and session change list. Keep it organized and reasonably concise.Review done, fixes applied, suite green: **45 tests, OK** (was 31 at the start of the session).
+
+**Findings from the strict review, and what I did about each**
+
+1. **Every raise site said only `not a duration: ...`** — the biggest one: the session's own earlier request for errors that name the offending part had never actually landed, and the ISO code I added squeezed six distinct failure modes (out of order, unknown unit, missing unit, empty duration, trailing designator, combined weeks) into one generic message. I rewrote both paths as scanners that locate the failure: the loose path is now a part-by-part loop and `_parse_iso` walks date/time components, each raising a message with the quoted fragment, its 1-based position, and the input — e.g. `unknown unit 'x' at position 5 in '1h30x'`, `unit 'h' is out of order at position 7 in 'pt30m1h'`, `missing components after 't' in 'p1dt'`.
+2. **Dead code I'd flagged in my first review and then left in place**: the unreachable `if not parts:` branch — gone, along with `_VALID` and `_ISO`/`_ISO_SECONDS`, which the scanners made redundant.
+3. **Test assertions pinned to the old generic text**: the three `assertIn("not a duration", ...)` checks in tests/test_cli.py now assert the specific new messages.
+4. **No tests asserted message content at parser level**: added `ErrorMessageTest` (tests/test_durations.py:120) covering all seven error kinds with exact equality.
+5. **README implied only bad input exits 2**: the no-arguments usage error also exits 2 — wording fixed in the CLI paragraph.
+
+Reviewed and deliberately left: Unicode-digit leniency (`\d`/`int()` accept non-ASCII digits — pre-existing behavior, consistent across both paths), `"empty duration"` having no position (nothing to point at), and the 365-day year / 30-day month approximations (already documented in the docstrings and README).
+
+**What changed this session, cumulatively**
+
+| File | Change |
+|---|---|
+| `durations/__init__.py` | ISO 8601 support (`PnW`, `PnYnMnDTnHnMnS`, order enforced), then rewritten as scanners with per-part error messages; dead branch and redundant regexes removed |
+| `durations/__main__.py` | New: `python3 -m durations <duration>...`, one number per line, exit 2 on parse/usage errors |
+| `tests/test_durations.py` | +21 ISO tests, +7 exact-message tests (`ErrorMessageTest`) |
+| `tests/test_cli.py` | New: 7 tests — `main()` unit tests plus two subprocess runs of the real entry point |
+| `README.md` | New "The durations package" section: formats, ISO rules, CLI, exit codes |
+
+Nothing was committed; all changes sit in the working tree for your review.
+[2026-10-10T12:49:21Z] run.usage_recorded
+[2026-10-10T12:49:21Z] run.completed
+
+✓ run complete · 642 in / 31234 out tokens
+────────────────────────────────────────
+[2026-10-10T12:49:21Z] run.log
+  agent ready

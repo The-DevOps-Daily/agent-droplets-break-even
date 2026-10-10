@@ -1,0 +1,9 @@
+ README.md               |  32 ++++++++++++
+ durations/__init__.py   |  95 +++++++++++++++++++++++++++++++----
+ durations/__main__.py   |  25 +++++++++
+ tests/test_cli.py       |  73 +++++++++++++++++++++++++++
+ tests/test_durations.py | 131 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 346 insertions(+), 10 deletions(-)
+Ran 45 tests in 0.036s
+
+OK

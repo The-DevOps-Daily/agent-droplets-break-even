@@ -3,3 +3,7 @@
 12:11:29 task 2: Add support for ISO 8601 durations such as PT1H30M and P2DT4
 12:18:19 task 3: Add a small command-line entry point: "python3 -m durations 
 12:23:13 task 4: Find every place that raises an error and make the error mes
+12:35:57 task 5: Add type hints to every public function and write a short se
+12:39:57 task 6: Review your own changes from this session as a strict review
+12:49:23 done after 6 tasks
+12:49:32 removing session long-session-1791634239
