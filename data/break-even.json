@@ -1,0 +1,272 @@
+{
+  "proBreakEvenUsage": 50,
+  "teamBreakEvenUsage": 208.82,
+  "maxSaving": {
+    "Pro": 8.82,
+    "Team": 50
+  },
+  "workloads": [
+    {
+      "name": "issue-to-PR run (2026-09)",
+      "perRun": 0.064,
+      "unit": "run",
+      "proBreakEvenRuns": 782,
+      "teamBreakEvenRuns": 3263
+    },
+    {
+      "name": "merged pull request (2026-09)",
+      "perRun": 0.1067,
+      "unit": "merged PR",
+      "proBreakEvenRuns": 469,
+      "teamBreakEvenRuns": 1958
+    }
+  ],
+  "curve": [
+    {
+      "usage": 0,
+      "Pay as you go": 0,
+      "Pro": 50,
+      "Team": 200
+    },
+    {
+      "usage": 10,
+      "Pay as you go": 10,
+      "Pro": 50,
+      "Team": 200
+    },
+    {
+      "usage": 20,
+      "Pay as you go": 20,
+      "Pro": 50,
+      "Team": 200
+    },
+    {
+      "usage": 30,
+      "Pay as you go": 30,
+      "Pro": 50,
+      "Team": 200
+    },
+    {
+      "usage": 40,
+      "Pay as you go": 40,
+      "Pro": 50,
+      "Team": 200
+    },
+    {
+      "usage": 50,
+      "Pay as you go": 50,
+      "Pro": 50,
+      "Team": 200
+    },
+    {
+      "usage": 60,
+      "Pay as you go": 60,
+      "Pro": 51.18,
+      "Team": 200
+    },
+    {
+      "usage": 70,
+      "Pay as you go": 70,
+      "Pro": 61.18,
+      "Team": 200
+    },
+    {
+      "usage": 80,
+      "Pay as you go": 80,
+      "Pro": 71.18,
+      "Team": 200
+    },
+    {
+      "usage": 90,
+      "Pay as you go": 90,
+      "Pro": 81.18,
+      "Team": 200
+    },
+    {
+      "usage": 100,
+      "Pay as you go": 100,
+      "Pro": 91.18,
+      "Team": 200
+    },
+    {
+      "usage": 110,
+      "Pay as you go": 110,
+      "Pro": 101.18,
+      "Team": 200
+    },
+    {
+      "usage": 120,
+      "Pay as you go": 120,
+      "Pro": 111.18,
+      "Team": 200
+    },
+    {
+      "usage": 130,
+      "Pay as you go": 130,
+      "Pro": 121.18,
+      "Team": 200
+    },
+    {
+      "usage": 140,
+      "Pay as you go": 140,
+      "Pro": 131.18,
+      "Team": 200
+    },
+    {
+      "usage": 150,
+      "Pay as you go": 150,
+      "Pro": 141.18,
+      "Team": 200
+    },
+    {
+      "usage": 160,
+      "Pay as you go": 160,
+      "Pro": 151.18,
+      "Team": 200
+    },
+    {
+      "usage": 170,
+      "Pay as you go": 170,
+      "Pro": 161.18,
+      "Team": 200
+    },
+    {
+      "usage": 180,
+      "Pay as you go": 180,
+      "Pro": 171.18,
+      "Team": 200
+    },
+    {
+      "usage": 190,
+      "Pay as you go": 190,
+      "Pro": 181.18,
+      "Team": 200
+    },
+    {
+      "usage": 200,
+      "Pay as you go": 200,
+      "Pro": 191.18,
+      "Team": 200
+    },
+    {
+      "usage": 210,
+      "Pay as you go": 210,
+      "Pro": 201.18,
+      "Team": 200
+    },
+    {
+      "usage": 220,
+      "Pay as you go": 220,
+      "Pro": 211.18,
+      "Team": 200
+    },
+    {
+      "usage": 230,
+      "Pay as you go": 230,
+      "Pro": 221.18,
+      "Team": 200
+    },
+    {
+      "usage": 240,
+      "Pay as you go": 240,
+      "Pro": 231.18,
+      "Team": 200
+    },
+    {
+      "usage": 250,
+      "Pay as you go": 250,
+      "Pro": 241.18,
+      "Team": 200
+    },
+    {
+      "usage": 260,
+      "Pay as you go": 260,
+      "Pro": 251.18,
+      "Team": 210
+    },
+    {
+      "usage": 270,
+      "Pay as you go": 270,
+      "Pro": 261.18,
+      "Team": 220
+    },
+    {
+      "usage": 280,
+      "Pay as you go": 280,
+      "Pro": 271.18,
+      "Team": 230
+    },
+    {
+      "usage": 290,
+      "Pay as you go": 290,
+      "Pro": 281.18,
+      "Team": 240
+    },
+    {
+      "usage": 300,
+      "Pay as you go": 300,
+      "Pro": 291.18,
+      "Team": 250
+    },
+    {
+      "usage": 310,
+      "Pay as you go": 310,
+      "Pro": 301.18,
+      "Team": 260
+    },
+    {
+      "usage": 320,
+      "Pay as you go": 320,
+      "Pro": 311.18,
+      "Team": 270
+    },
+    {
+      "usage": 330,
+      "Pay as you go": 330,
+      "Pro": 321.18,
+      "Team": 280
+    },
+    {
+      "usage": 340,
+      "Pay as you go": 340,
+      "Pro": 331.18,
+      "Team": 290
+    },
+    {
+      "usage": 350,
+      "Pay as you go": 350,
+      "Pro": 341.18,
+      "Team": 300
+    },
+    {
+      "usage": 360,
+      "Pay as you go": 360,
+      "Pro": 351.18,
+      "Team": 310
+    },
+    {
+      "usage": 370,
+      "Pay as you go": 370,
+      "Pro": 361.18,
+      "Team": 320
+    },
+    {
+      "usage": 380,
+      "Pay as you go": 380,
+      "Pro": 371.18,
+      "Team": 330
+    },
+    {
+      "usage": 390,
+      "Pay as you go": 390,
+      "Pro": 381.18,
+      "Team": 340
+    },
+    {
+      "usage": 400,
+      "Pay as you go": 400,
+      "Pro": 391.18,
+      "Team": 350
+    }
+  ]
+}

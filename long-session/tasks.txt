@@ -1,0 +1,6 @@
+Read the repository at /workspace/repo. Explain in five sentences what the durations package does, how it is tested, and the weakest part of the parser.
+Add support for ISO 8601 durations such as PT1H30M and P2DT4H to the parser. Keep the existing formats working. Add tests in tests/ and run "cd /workspace/repo && python3 -m unittest -q" until it passes.
+Add a small command-line entry point: "python3 -m durations 1h30m" prints the number of seconds. Add a test for it and run the full test suite.
+Find every place that raises an error and make the error messages say which part of the input was wrong. Update the tests that check messages, and run the suite.
+Add type hints to every public function and write a short section in README.md that documents the ISO 8601 support and the command-line entry point.
+Review your own changes from this session as a strict reviewer would. Fix anything you find, run the suite one last time, and list what changed in this session.

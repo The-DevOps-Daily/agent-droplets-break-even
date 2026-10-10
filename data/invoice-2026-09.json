@@ -1,0 +1,318 @@
+{
+  "period": "2026-09",
+  "productTotals": {
+    "OHS Compute": 0,
+    "Harness Runtime Serverless Inference": 0.62,
+    "Harness Runtime Bandwidth": 0
+  },
+  "lines": [
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 1 vCPU / 1GB",
+      "session": "claude-code-check",
+      "amount": 0,
+      "start": "2026-09-28T13:11:41Z",
+      "end": "2026-09-28T13:11:59Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 2 vCPU / 4GB",
+      "session": "policy-probe-2f60878f",
+      "amount": 0,
+      "start": "2026-09-28T13:01:56Z",
+      "end": "2026-09-28T13:04:41Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 2 vCPU / 4GB",
+      "session": "policy-probe",
+      "amount": 0,
+      "start": "2026-09-28T13:01:32Z",
+      "end": "2026-09-28T13:01:45Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 2 vCPU / 4GB",
+      "session": "issue-3-1790600274",
+      "amount": 0,
+      "start": "2026-09-28T12:58:40Z",
+      "end": "2026-09-28T12:59:50Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 2 vCPU / 4GB",
+      "session": "issue-2-1790600096",
+      "amount": 0,
+      "start": "2026-09-28T12:55:00Z",
+      "end": "2026-09-28T12:56:19Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 2 vCPU / 4GB",
+      "session": "issue-2-1790600017",
+      "amount": 0,
+      "start": "2026-09-28T12:53:40Z",
+      "end": "2026-09-28T12:54:38Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 2 vCPU / 4GB",
+      "session": "issue-2-1790599911",
+      "amount": 0,
+      "start": "2026-09-28T12:52:08Z",
+      "end": "2026-09-28T12:52:59Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 2 vCPU / 4GB",
+      "session": "issue-1-1790599744",
+      "amount": 0,
+      "start": "2026-09-28T12:49:08Z",
+      "end": "2026-09-28T12:49:46Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 2 vCPU / 4GB",
+      "session": "issue-1-1790599681",
+      "amount": 0,
+      "start": "2026-09-28T12:48:05Z",
+      "end": "2026-09-28T12:48:42Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 2 vCPU / 4GB",
+      "session": "issue-1-1790599601",
+      "amount": 0,
+      "start": "2026-09-28T12:46:45Z",
+      "end": "2026-09-28T12:47:46Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 2 vCPU / 4GB",
+      "session": "explore-1",
+      "amount": 0,
+      "start": "2026-09-28T12:42:52Z",
+      "end": "2026-09-28T12:44:00Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 1 vCPU / 1GB",
+      "session": "probe-2",
+      "amount": 0,
+      "start": "2026-09-28T12:38:19Z",
+      "end": "2026-09-28T12:39:00Z"
+    },
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 1 vCPU / 1GB",
+      "session": "probe-1",
+      "amount": 0,
+      "start": "2026-09-28T12:37:31Z",
+      "end": "2026-09-28T12:38:59Z"
+    },
+    {
+      "product": "Harness Runtime Bandwidth",
+      "description": "Harness Runtime Bandwidth - 0.00GiB @ $0.01/GiB",
+      "session": null,
+      "amount": 0
+    },
+    {
+      "product": "Harness Runtime Bandwidth",
+      "description": "Harness Runtime Bandwidth - 0.00GiB @ $0.01/GiB",
+      "session": null,
+      "amount": 0
+    },
+    {
+      "product": "Harness Runtime Bandwidth",
+      "description": "Harness Runtime Bandwidth - 0.00GiB @ $0.01/GiB",
+      "session": null,
+      "amount": 0
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Output tokens (4 @ $0.00348/thousand)",
+      "session": "probe-2",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Input tokens (3107 @ $0.00174/thousand)",
+      "session": "probe-2",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Output tokens (2113 @ $0.00348/thousand)",
+      "session": "issue-3-1790600274",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Input tokens (9514 @ $0.00174/thousand)",
+      "session": "issue-3-1790600274",
+      "amount": 0.02
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Cache Read Input tokens (72192 @ $0.000348/thousand)",
+      "session": "issue-3-1790600274",
+      "amount": 0.03
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Output tokens (1852 @ $0.00348/thousand)",
+      "session": "issue-2-1790599911",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Input tokens (15136 @ $0.00174/thousand)",
+      "session": "issue-2-1790599911",
+      "amount": 0.03
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Cache Read Input tokens (105472 @ $0.000348/thousand)",
+      "session": "issue-2-1790599911",
+      "amount": 0.04
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Output tokens (1028 @ $0.00348/thousand)",
+      "session": "issue-1-1790599744",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Input tokens (8989 @ $0.00174/thousand)",
+      "session": "issue-1-1790599744",
+      "amount": 0.02
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Cache Read Input tokens (61696 @ $0.000348/thousand)",
+      "session": "issue-1-1790599744",
+      "amount": 0.02
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Output tokens (77 @ $0.00348/thousand)",
+      "session": "policy-probe-2f60878f",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Input tokens (1780 @ $0.00174/thousand)",
+      "session": "policy-probe-2f60878f",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Cache Read Input tokens (17408 @ $0.000348/thousand)",
+      "session": "policy-probe-2f60878f",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Output tokens (5 @ $0.00348/thousand)",
+      "session": "policy-probe",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Input tokens (792 @ $0.00174/thousand)",
+      "session": "policy-probe",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Cache Read Input tokens (8960 @ $0.000348/thousand)",
+      "session": "policy-probe",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Output tokens (1609 @ $0.00348/thousand)",
+      "session": "issue-2-1790600096",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Input tokens (14984 @ $0.00174/thousand)",
+      "session": "issue-2-1790600096",
+      "amount": 0.03
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Cache Read Input tokens (57344 @ $0.000348/thousand)",
+      "session": "issue-2-1790600096",
+      "amount": 0.02
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Output tokens (2272 @ $0.00348/thousand)",
+      "session": "issue-2-1790600017",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Input tokens (15184 @ $0.00174/thousand)",
+      "session": "issue-2-1790600017",
+      "amount": 0.03
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Cache Read Input tokens (82176 @ $0.000348/thousand)",
+      "session": "issue-2-1790600017",
+      "amount": 0.03
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Output tokens (1638 @ $0.00348/thousand)",
+      "session": "issue-1-1790599681",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Input tokens (15100 @ $0.00174/thousand)",
+      "session": "issue-1-1790599681",
+      "amount": 0.03
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Cache Read Input tokens (70912 @ $0.000348/thousand)",
+      "session": "issue-1-1790599681",
+      "amount": 0.02
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Output tokens (2706 @ $0.00348/thousand)",
+      "session": "issue-1-1790599601",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Input tokens (46112 @ $0.00174/thousand)",
+      "session": "issue-1-1790599601",
+      "amount": 0.08
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Cache Read Input tokens (140800 @ $0.000348/thousand)",
+      "session": "issue-1-1790599601",
+      "amount": 0.05
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Output tokens (4 @ $0.00348/thousand)",
+      "session": "explore-1",
+      "amount": 0.01
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "Deepseek V4 Pro Input tokens (5116 @ $0.00174/thousand)",
+      "session": "explore-1",
+      "amount": 0.01
+    }
+  ]
+}

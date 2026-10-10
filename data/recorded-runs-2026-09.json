@@ -1,0 +1,10 @@
+{
+  "source": "https://github.com/The-DevOps-Daily/do-agent-issue-to-pr/tree/main/runs (each run's timeline.log names its session)",
+  "runs": [
+    { "session": "issue-1-1790599744", "run": "Issue #1", "outcome": "merged (#4)", "merged": true },
+    { "session": "issue-2-1790599911", "run": "Issue #2, first try", "outcome": "closed in review (#5)", "merged": false },
+    { "session": "issue-2-1790600017", "run": "Issue #2, second try", "outcome": "push refused (old branch)", "merged": false },
+    { "session": "issue-2-1790600096", "run": "Issue #2, third try", "outcome": "merged (#6)", "merged": true },
+    { "session": "issue-3-1790600274", "run": "Issue #3", "outcome": "merged (#7)", "merged": true }
+  ]
+}

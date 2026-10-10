@@ -1,0 +1,5 @@
+12:10:39 creating session long-session-1791634239
+12:11:04 task 1: Read the repository at /workspace/repo. Explain in five sent
+12:11:29 task 2: Add support for ISO 8601 durations such as PT1H30M and P2DT4
+12:18:19 task 3: Add a small command-line entry point: "python3 -m durations 
+12:23:13 task 4: Find every place that raises an error and make the error mes

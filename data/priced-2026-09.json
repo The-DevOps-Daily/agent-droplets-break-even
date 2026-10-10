@@ -1,0 +1,293 @@
+{
+  "period": "2026-09",
+  "invoiceProductTotals": {
+    "OHS Compute": 0,
+    "Harness Runtime Serverless Inference": 0.62,
+    "Harness Runtime Bandwidth": 0
+  },
+  "sessions": [
+    {
+      "session": "claude-code-check",
+      "tokens": {},
+      "exact": 0,
+      "billed": 0,
+      "computeSeconds": 18,
+      "computeListCost": 0.00027,
+      "computeBilled": 0,
+      "size": "1 vCPU / 1 GB"
+    },
+    {
+      "session": "explore-1",
+      "tokens": {
+        "output": 4,
+        "input": 5116
+      },
+      "exact": 0.00892,
+      "billed": 0.02,
+      "computeSeconds": 68,
+      "computeListCost": 0.00238,
+      "computeBilled": 0,
+      "size": "2 vCPU / 4 GB",
+      "model": "Deepseek V4 Pro"
+    },
+    {
+      "session": "issue-1-1790599601",
+      "tokens": {
+        "output": 2706,
+        "input": 46112,
+        "cacheRead": 140800
+      },
+      "exact": 0.13865,
+      "billed": 0.14,
+      "computeSeconds": 61,
+      "computeListCost": 0.00214,
+      "computeBilled": 0,
+      "size": "2 vCPU / 4 GB",
+      "model": "Deepseek V4 Pro"
+    },
+    {
+      "session": "issue-1-1790599681",
+      "tokens": {
+        "output": 1638,
+        "input": 15100,
+        "cacheRead": 70912
+      },
+      "exact": 0.05665,
+      "billed": 0.06,
+      "computeSeconds": 37,
+      "computeListCost": 0.0013,
+      "computeBilled": 0,
+      "size": "2 vCPU / 4 GB",
+      "model": "Deepseek V4 Pro"
+    },
+    {
+      "session": "issue-1-1790599744",
+      "tokens": {
+        "output": 1028,
+        "input": 8989,
+        "cacheRead": 61696
+      },
+      "exact": 0.04069,
+      "billed": 0.05,
+      "computeSeconds": 38,
+      "computeListCost": 0.00133,
+      "computeBilled": 0,
+      "size": "2 vCPU / 4 GB",
+      "model": "Deepseek V4 Pro"
+    },
+    {
+      "session": "issue-2-1790599911",
+      "tokens": {
+        "output": 1852,
+        "input": 15136,
+        "cacheRead": 105472
+      },
+      "exact": 0.06949,
+      "billed": 0.08,
+      "computeSeconds": 51,
+      "computeListCost": 0.00178,
+      "computeBilled": 0,
+      "size": "2 vCPU / 4 GB",
+      "model": "Deepseek V4 Pro"
+    },
+    {
+      "session": "issue-2-1790600017",
+      "tokens": {
+        "output": 2272,
+        "input": 15184,
+        "cacheRead": 82176
+      },
+      "exact": 0.06292,
+      "billed": 0.07,
+      "computeSeconds": 58,
+      "computeListCost": 0.00203,
+      "computeBilled": 0,
+      "size": "2 vCPU / 4 GB",
+      "model": "Deepseek V4 Pro"
+    },
+    {
+      "session": "issue-2-1790600096",
+      "tokens": {
+        "output": 1609,
+        "input": 14984,
+        "cacheRead": 57344
+      },
+      "exact": 0.05163,
+      "billed": 0.06,
+      "computeSeconds": 79,
+      "computeListCost": 0.00277,
+      "computeBilled": 0,
+      "size": "2 vCPU / 4 GB",
+      "model": "Deepseek V4 Pro"
+    },
+    {
+      "session": "issue-3-1790600274",
+      "tokens": {
+        "output": 2113,
+        "input": 9514,
+        "cacheRead": 72192
+      },
+      "exact": 0.04903,
+      "billed": 0.06,
+      "computeSeconds": 70,
+      "computeListCost": 0.00245,
+      "computeBilled": 0,
+      "size": "2 vCPU / 4 GB",
+      "model": "Deepseek V4 Pro"
+    },
+    {
+      "session": "policy-probe",
+      "tokens": {
+        "output": 5,
+        "input": 792,
+        "cacheRead": 8960
+      },
+      "exact": 0.00451,
+      "billed": 0.03,
+      "computeSeconds": 13,
+      "computeListCost": 0.00046,
+      "computeBilled": 0,
+      "size": "2 vCPU / 4 GB",
+      "model": "Deepseek V4 Pro"
+    },
+    {
+      "session": "policy-probe-2f60878f",
+      "tokens": {
+        "output": 77,
+        "input": 1780,
+        "cacheRead": 17408
+      },
+      "exact": 0.00942,
+      "billed": 0.03,
+      "computeSeconds": 165,
+      "computeListCost": 0.00577,
+      "computeBilled": 0,
+      "size": "2 vCPU / 4 GB",
+      "model": "Deepseek V4 Pro"
+    },
+    {
+      "session": "probe-1",
+      "tokens": {},
+      "exact": 0,
+      "billed": 0,
+      "computeSeconds": 88,
+      "computeListCost": 0.00131,
+      "computeBilled": 0,
+      "size": "1 vCPU / 1 GB"
+    },
+    {
+      "session": "probe-2",
+      "tokens": {
+        "output": 4,
+        "input": 3107
+      },
+      "exact": 0.00542,
+      "billed": 0.02,
+      "computeSeconds": 41,
+      "computeListCost": 0.00061,
+      "computeBilled": 0,
+      "size": "1 vCPU / 1 GB",
+      "model": "Deepseek V4 Pro"
+    }
+  ],
+  "issueSessions": {
+    "count": 7,
+    "exactModelCost": 0.4691,
+    "billedModelCost": 0.52
+  },
+  "recordedRuns": {
+    "runs": [
+      {
+        "session": "issue-1-1790599744",
+        "run": "Issue #1",
+        "outcome": "merged (#4)",
+        "merged": true,
+        "tokens": {
+          "output": 1028,
+          "input": 8989,
+          "cacheRead": 61696
+        },
+        "exact": 0.04069,
+        "billed": 0.05,
+        "computeSeconds": 38,
+        "computeBilled": 0
+      },
+      {
+        "session": "issue-2-1790599911",
+        "run": "Issue #2, first try",
+        "outcome": "closed in review (#5)",
+        "merged": false,
+        "tokens": {
+          "output": 1852,
+          "input": 15136,
+          "cacheRead": 105472
+        },
+        "exact": 0.06949,
+        "billed": 0.08,
+        "computeSeconds": 51,
+        "computeBilled": 0
+      },
+      {
+        "session": "issue-2-1790600017",
+        "run": "Issue #2, second try",
+        "outcome": "push refused (old branch)",
+        "merged": false,
+        "tokens": {
+          "output": 2272,
+          "input": 15184,
+          "cacheRead": 82176
+        },
+        "exact": 0.06292,
+        "billed": 0.07,
+        "computeSeconds": 58,
+        "computeBilled": 0
+      },
+      {
+        "session": "issue-2-1790600096",
+        "run": "Issue #2, third try",
+        "outcome": "merged (#6)",
+        "merged": true,
+        "tokens": {
+          "output": 1609,
+          "input": 14984,
+          "cacheRead": 57344
+        },
+        "exact": 0.05163,
+        "billed": 0.06,
+        "computeSeconds": 79,
+        "computeBilled": 0
+      },
+      {
+        "session": "issue-3-1790600274",
+        "run": "Issue #3",
+        "outcome": "merged (#7)",
+        "merged": true,
+        "tokens": {
+          "output": 2113,
+          "input": 9514,
+          "cacheRead": 72192
+        },
+        "exact": 0.04903,
+        "billed": 0.06,
+        "computeSeconds": 70,
+        "computeBilled": 0
+      }
+    ],
+    "count": 5,
+    "merged": 3,
+    "exactModelCost": 0.2738,
+    "billedModelCost": 0.32,
+    "computeBilled": 0,
+    "billedPerRun": 0.064,
+    "billedPerMergedPullRequest": 0.1067
+  },
+  "roundingRule": {
+    "rule": "max(0.01, round(exact, 2)) per token line",
+    "lines": 31,
+    "matches": 31
+  },
+  "allSessions": {
+    "exactModelCost": 0.4973,
+    "billedModelCost": 0.62
+  }
+}

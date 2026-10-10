@@ -1,0 +1,30 @@
+# One longer OpenCode session on a model the Agent Droplets plans discount
+# (GLM-5.3, hosted by DigitalOcean). Same sandbox size as the issue-to-PR runs.
+name: long-session
+agent: opencode
+size: mars-2vcpu-4gb
+idle_timeout: 10m
+env:
+  HARNESS_INFERENCE_MODEL: glm-5.3
+secrets:
+  HARNESS_INFERENCE_API_KEY: ${DO_INFERENCE_KEY}
+egress:
+  - api.github.com
+permissions:
+  default: deny
+  filesystem:
+    mode: workspace-write
+  rules:
+    - tool: file.read
+      action: allow
+    - tool: file.write
+      match: { path: "/workspace/**" }
+      action: allow
+    - tool: bash
+      action: allow
+    - tool: bash
+      match: { command: "git push*" }
+      action: deny
+    - tool: bash
+      match: { command: "curl *" }
+      action: deny
