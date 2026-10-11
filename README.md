@@ -39,6 +39,7 @@ List prices are in [`scripts/prices.mjs`](scripts/prices.mjs), with the pages th
 - `invoice-2026-09.json`: the 47 Managed Agents lines from our September 2026 invoice. The sessions are the runs from [do-agent-issue-to-pr](https://github.com/The-DevOps-Daily/do-agent-issue-to-pr) plus a few probes. The account's credits paid the invoice; the line amounts are the list-price charges before credits.
 - `recorded-runs-2026-09.json`: which invoice session is which recorded run, from each run's `timeline.log`.
 - `priced-2026-09.json` and `break-even.json`: the outputs of stages 2 and 3.
+- `invoice-2026-10.json` and `priced-2026-10.json`: the long session from stage 4 (39 minutes on GLM-5.3, six prompts, 45 tests passing at the end), from the October invoice preview. It was billed $0.78: $0.74 for tokens and $0.04 for compute. At that cost, `node calc.mjs --runs 65 --cost 0.78` is the first volume where Pro is cheaper.
 
 ## What this does not tell you
 

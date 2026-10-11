@@ -1,0 +1,38 @@
+{
+  "period": "2026-10",
+  "invoiceProductTotals": {
+    "Harness Runtime Serverless Inference": 0.74,
+    "OHS Compute": 0.04
+  },
+  "sessions": [
+    {
+      "session": "long-session-1791634239",
+      "tokens": {
+        "output": 102865,
+        "input": 26087,
+        "cacheRead": 971520
+      },
+      "exact": 0.74172,
+      "billed": 0.74,
+      "computeSeconds": 2318,
+      "computeListCost": 0.08113,
+      "computeBilled": 0.04,
+      "size": "2 vCPU / 4 GB",
+      "model": "GLM 5.3"
+    }
+  ],
+  "issueSessions": {
+    "count": 0,
+    "exactModelCost": 0,
+    "billedModelCost": 0
+  },
+  "roundingRule": {
+    "rule": "max(0.01, round(exact, 2)) per token line",
+    "lines": 3,
+    "matches": 3
+  },
+  "allSessions": {
+    "exactModelCost": 0.7417,
+    "billedModelCost": 0.74
+  }
+}

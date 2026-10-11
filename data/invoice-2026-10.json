@@ -1,0 +1,35 @@
+{
+  "period": "2026-10",
+  "productTotals": {
+    "Harness Runtime Serverless Inference": 0.74,
+    "OHS Compute": 0.04
+  },
+  "lines": [
+    {
+      "product": "OHS Compute",
+      "description": "Harness Runtime - 2 vCPU / 4GB",
+      "session": "long-session-1791634239",
+      "amount": 0.04,
+      "start": "2026-10-10T12:10:55Z",
+      "end": "2026-10-10T12:49:33Z"
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "GLM 5.3 Output tokens (102865 @ $0.0044/thousand)",
+      "session": "long-session-1791634239",
+      "amount": 0.45
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "GLM 5.3 Input tokens (26087 @ $0.0014/thousand)",
+      "session": "long-session-1791634239",
+      "amount": 0.04
+    },
+    {
+      "product": "Harness Runtime Serverless Inference",
+      "description": "GLM 5.3 Cache Read Input tokens (971520 @ $0.00026/thousand)",
+      "session": "long-session-1791634239",
+      "amount": 0.25
+    }
+  ]
+}
